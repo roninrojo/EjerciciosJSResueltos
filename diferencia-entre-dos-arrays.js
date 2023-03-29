@@ -10,6 +10,11 @@ function diffArray(arr1, arr2) {
     const diff1 = arr1.filter(item => !arr2.includes(item));
     const diff2 = arr2.filter(item => !arr1.includes(item));
     return [...diff1, ...diff2]
+
+    /* Extra:
+    Concatenamos primero y evaluamos dos condiciones en filter a la vez
+    return arr1.concat(arr2).filter(item => !arr2.includes(item) || !arr1.includes(item));
+    */
 }
 
 console.log(diffArray([1, 2, 3, 5, 6, 7, 8], [1, 2, 3, 4, 5, 8]));
