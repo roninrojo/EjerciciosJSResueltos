@@ -8,7 +8,7 @@ function whatIsInAName(collection, source) {
     // Extraigo las key del objecto y las guardo en un array
     const keys = Object.keys(source)
 
-    // Filtro el array collection, diciendole que por cada objecto, evalue mediante every las keys del array keys y me diga si la propiedad existe en obj y si el valor del objecto con la propiedad key es ifgual al valor del objecto source con la misma propiedad
+    // Filtro el array collection, diciéndole que por cada objecto, evalue mediante every las keys del array keys y me diga si la propiedad existe en obj y si el valor del objecto con la propiedad key es igual al valor del objecto source con la misma propiedad
     const match = collection.filter(obj => {
         return keys.every(key => {
             return obj.hasOwnProperty(key) && obj[key] === source[key]
