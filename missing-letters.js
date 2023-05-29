@@ -7,7 +7,7 @@ function fearNotLetter(str) {
     const abc = "abcdefghijklmnopqrstuvwxyz"
 
     // Identifico donde comienza la cadena, usando el primer carácter de str
-    const index = abc.indexOf(str.charAt(0))
+    const index = abc.indexOf(str.charAt(0))    
 
     // luego extraigo la cadena equivalente de abc
     const sliced = abc.slice(index, index + str.length)
