@@ -7,18 +7,28 @@ Revisa las pruebas de afirmación para ver ejemplos.
 */
 
 function uniteUnique() {
-    console.log([...arguments].flat());
-    
-    const result = [...arguments]
+    // Usamos el valor ...arguments para coger todos los arrays pasados, los unificamos con flat y filtramos aquellos que coincidan con su indice. Como indexOf se queda con el primer valor donde aparecen las siguientes apariciones no coincidiran y serán false.
+    // Pj indexOf(1) = 0, cuando vuelve a aparecer 1 el indice vale 9, pero su indexOf = 0, lo filtra.
+    return [...arguments]
         .flat()
         .filter((item, ind, arr) => {
-            console.log(`${arr.indexOf(item)}-${ind}`);
-            
+            // console.log(`${arr.indexOf(item)}-${ind}`); // <- para ver comparación
             return arr.indexOf(item) === ind
         });
-    console.log(result);
     
-    // return arr;
+    /*  Otra aproximación más clásica:
+
+        const args = [...arguments];
+        const result = [];
+        for (let i = 0; i < args.length; i++) {
+            for (let j = 0; j < args[i].length; j++) {
+                if (!result.includes(args[i][j])) {
+                    result.push(args[i][j]);
+                }
+            }
+        }
+        return result;
+    */
 }
 
 uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
