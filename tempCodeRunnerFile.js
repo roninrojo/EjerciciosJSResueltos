@@ -1,1 +1,1 @@
-s*
+Stuff in "quotation marks"
