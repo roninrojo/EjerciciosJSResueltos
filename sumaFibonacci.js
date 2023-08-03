@@ -9,10 +9,30 @@ Por ejemplo, sumFibs(10) debe devolver 10 porque todos los números impares de F
 */
 
 function sumFibs(num) {
-    return num;
+    let i = 0
+    let fibNums = []
+
+    
+    for (i; i <= num; i++) {
+        // Los dos primeros números de la serie los coloco directamente en el array
+        if (i === 0 || i === 1 ) fibNums.push(i);
+        else {
+            // Hago slice de los dos ultimos items del array, con reduce los sumo
+            fibNums.push(fibNums.slice(-2).reduce((acc, item) => acc + item))
+           
+            // Si la suma del último item es mayor que num lo saco del array y paro el bucle
+            if (fibNums.slice(-1) > num) {
+                fibNums.pop()
+                break;
+            }
+        }
+    }
+    // Finalmente filtro los items que son impares y los vuelvo a sumar con reduce
+    fibNums = fibNums.filter(item => item % 2 !== 0).reduce((acc,item) => acc + item)
+    return fibNums;
 }
 
-sumFibs(4);
+console.log(sumFibs(14));
 
 /* 
 sumFibs(1) debe devolver un número.
