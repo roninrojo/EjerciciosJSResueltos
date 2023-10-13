@@ -14,8 +14,8 @@ Ejercicios Javascript de diferentes plataformas de aprendizaje, resueltos y come
     * ✅ Letras faltantes
     * ✅ Unión ordenada
     * ✅ Convierte entidades HTML
-    * 🔲 Suma todos los números impares de Fibonacci
-    * 🔲 Suma todos los números primos
+    * ✅ Suma todos los números impares de Fibonacci
+    * ✅ Suma todos los números primos
     * 🔲 Mínimo común múltiplo
     * 🔲 Déjalo caer
     * 🔲 Aplanadora
